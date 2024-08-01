@@ -5,31 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador</title>  
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <img src="assets/img/LogoLogo-allura.svg" alt="logo de allura">
     </header>
     <main>
-        <form action="">
-            <textarea name="" id="" placeholder="Ingrese texto"></textarea>
-            <div class="btn_container">
-                <div class="btn_alert_msj"><img src="assets/img/Logo-alerta.svg" alt="icono de alerta"><span>Solo letras minúsculas y sin acento</span>
-                    
-                </div>
+        <form class="form__section">
+            <textarea class="form__input" name="texto" id="" string=string.toLowerCase placeholder="Ingrese texto"></textarea>
+            <div class="container">
+                    <div class="btn_container">
+                                    <div class="btn_alert_msj"><img src="assets/img/Logo-alerta.svg" alt="icono de alerta">
+                                        <span>Solo letras minúsculas y sin acento</span>
+                                    </div>
+                    </div>
                 <input type="submit" value="Encriptar">
                 <input type="submit" value="Desencriptar">
             </div>
         </form>
+        
+        <aside class="result__decrypted">
+            <img src="assets/img/Muñeco.svg" alt="" class="result__decrypted__img">
+            <div class="result__decrypted__container">
+                <h3 class="result__decrypted__container__title">Ningún mensaje fue encontrado</h3>
+                <p class="result__decrypted__container__text">Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+        </aside>
+   
     </main>
-    <aside class="result__decrypted">
-    <img src="assets/img/Muñeco.svg" alt="" class="result__decrypted__img">
-    <div class="result__decrypted__container">
-        <h3 class="result__decrypted__container__title">Ningún mensaje fue encontrado</h3>
-        <p class="result__decrypted__container__text">Ingresa el texto que desees encriptar o desencriptar.</p>
-    </div>
-
-    </aside>
+   
 
 </body>
 </html>

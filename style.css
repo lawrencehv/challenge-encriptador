@@ -1,0 +1,53 @@
+:root{
+    --darkblue: #0A3871;
+    --lightblue: #F3F5FC;
+    --inter: "Inter", sans-serif;
+}
+
+html{
+    font-size: 62.5%; /* 1rem=10px*/
+}
+
+body{
+    background-color: var(--lightblue);
+    font-family: var(--inter);
+}
+
+.header{
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+    width: 67%;
+}
+
+header img{
+    width: 120px;
+    height: 48px;
+}
+main{
+    display: flex;
+    justify-content: space-around;
+}
+
+.form__section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 65dvh;
+    width: 40%;
+}
+
+.form__input{
+    width: 560px;
+    height: 50dvh;
+    background-color: transparent;
+    border-color: transparent;
+    resize: none;
+    outline: none;
+    font-family: var(--inter);
+    font-size: 3.2rem;
+    text-align: justify;
+    color: var(--darkblue);
+}
+::placeholder{
+    color: var(--darkblue);
+}
