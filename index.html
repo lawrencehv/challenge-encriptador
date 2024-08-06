@@ -15,20 +15,20 @@
     </header>
     <main>
         <form class="form__section">
-            <textarea class="form__input" name="texto" id="" string=string.toLowerCase placeholder="Ingrese texto"></textarea>
+            <textarea class="form__input" name="texto" id="" placeholder="Ingrese texto"></textarea>
             <div class="container">
-                    <div class="btn_container">
-                                    <div class="btn_alert_msj"><img src="assets/img/Logo-alerta.svg" alt="icono de alerta">
-                                        <span>Solo letras minúsculas y sin acento</span>
-                                    </div>
-                    </div>
-                <input type="submit" value="Encriptar">
-                <input type="submit" value="Desencriptar">
+                <div class="btn_alert_msj"><img src="assets/img/Logo-alerta.svg" alt="icono de alerta">
+                    <span>Solo letras minúsculas y sin acento</span>
+                </div>
+                <div class="btn_container">
+                    <input class="form_btn" type="submit" value="Encriptar">
+                    <input class="form_btn form_btn--secundary" type="submit" value="Desencriptar">
+                </div>
             </div>
         </form>
         
         <aside class="result__decrypted">
-            <img src="assets/img/Muñeco.svg" alt="" class="result__decrypted__img">
+            <img src="assets/img/Muñeco.svg" alt="imagen de la caja de resultado" class="result__decrypted__img">
             <div class="result__decrypted__container">
                 <h3 class="result__decrypted__container__title">Ningún mensaje fue encontrado</h3>
                 <p class="result__decrypted__container__text">Ingresa el texto que desees encriptar o desencriptar.</p>
