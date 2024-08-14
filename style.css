@@ -73,7 +73,7 @@ main{
     display: flex;
 }
 
-.form_btn{
+.form__btn{
     background: var(--darkblue);
     font-size: 1.6rem;
     color: white;
@@ -85,17 +85,26 @@ main{
     font-weight: 700;
 }
 
-.form_btn--secundary{
+.form__btn--secundary{
+    background-color: transparent;
+    color: var(--darkblue);
+}
+
+.form__btn--result{
     background-color: #D8DFE8;
     color: var(--darkblue);
 }
 
+.hidden{
+    display: none;
+}
 .result__decrypted{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: white;
+    font-size: 2rem;
     width: 100%;
     max-width: 40rem;
     height: 100dvh;
@@ -103,6 +112,7 @@ main{
     gap: 3rem;
     margin-bottom: 50rem;
 }
+
 
 .result__decrypted__img{
     display: block;
@@ -115,26 +125,8 @@ main{
         gap: 2rem;
     } 
     .form__section {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
         height: 64dvh;
-        max-width: 40rem;
-        width: 100%;
-    }
-
-    .result__decrypted {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-color: white;
-        width: 100%;
-        max-width: 40rem;
-        height: 15dvh;
-        border-radius: 32px;
-        gap: 2rem;
-        margin-bottom: 50rem;
+       
     }
 
     .result__decrypted__img{
@@ -144,38 +136,56 @@ main{
 
 @media screen and (max-width:435px) {
 
+    header img {
+        width: 70px;
+        height: 48px;
+    }
+    
+    .form__section {
+    height: 64dvh;
+    }
+
+    .form__input {
+        font-size: 1.5rem;
+    }
+
     .btn_container{
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
         gap: 1rem;
     }
-
-    .form__section {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 64dvh;
-    max-width: 40rem;
-    width: 100%;
-}
 
     .form_btn{
         width: 250px;
         height: 50px;
     }
-    
-    .result__decrypted{
-        display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    width: 100%;
-    max-width: 40rem;
-    height: 18dvh;
-    border-radius: 32px;
-    gap: 3rem;
-    margin-bottom: 50rem;
-    }
+
 }
+
+
+.loader {
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 8px solid #514b82;
+    animation:
+      l20-1 0.8s infinite linear alternate,
+      l20-2 1.6s infinite linear;
+  }
+  @keyframes l20-1{
+     0%    {clip-path: polygon(50% 50%,0       0,  50%   0%,  50%    0%, 50%    0%, 50%    0%, 50%    0% )}
+     12.5% {clip-path: polygon(50% 50%,0       0,  50%   0%,  100%   0%, 100%   0%, 100%   0%, 100%   0% )}
+     25%   {clip-path: polygon(50% 50%,0       0,  50%   0%,  100%   0%, 100% 100%, 100% 100%, 100% 100% )}
+     50%   {clip-path: polygon(50% 50%,0       0,  50%   0%,  100%   0%, 100% 100%, 50%  100%, 0%   100% )}
+     62.5% {clip-path: polygon(50% 50%,100%    0, 100%   0%,  100%   0%, 100% 100%, 50%  100%, 0%   100% )}
+     75%   {clip-path: polygon(50% 50%,100% 100%, 100% 100%,  100% 100%, 100% 100%, 50%  100%, 0%   100% )}
+     100%  {clip-path: polygon(50% 50%,50%  100%,  50% 100%,   50% 100%,  50% 100%, 50%  100%, 0%   100% )}
+  }
+  @keyframes l20-2{ 
+    0%    {transform:scaleY(1)  rotate(0deg)}
+    49.99%{transform:scaleY(1)  rotate(135deg)}
+    50%   {transform:scaleY(-1) rotate(0deg)}
+    100%  {transform:scaleY(-1) rotate(-135deg)}
+  }
